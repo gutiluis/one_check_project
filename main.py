@@ -14,8 +14,9 @@ def one_check():
         number_of_payments = int(input("In how many payments? "))
     except ValueError:
         print("Oh no! That's not a valid value. Try again...")
-    amount_due = total_due / number_of_payments
-    print("The net pay per payment due and before interest is: ${}".format(amount_due))
+    else:
+        amount_due = total_due / number_of_payments
+        print("The net pay per payment due and before interest is: ${}".format(amount_due))
 
 # interest rate function
 def interest_with_pay():
@@ -24,10 +25,11 @@ def interest_with_pay():
         interest_rate = float(input("What is the interest rate per partial payment? "))
     except ValueError:
         print("Oh no! That's not a valid value. Try again...")
-    n = first_payment / interest_rate
-    r = n + first_payment
-    amount_with_interest = r
-    print("The amount with interest per payment after due date is: ${}".format(r))
+    else:
+        n = first_payment / interest_rate
+        r = n + first_payment
+        amount_with_interest = r
+        print("The amount with interest per payment after due date is: ${}".format(r))
 
 def try_again():
     while True:
